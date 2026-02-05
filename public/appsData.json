@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "title": "TaskFlow",
+    "companyName": "Productivity Inc.",
+    "image": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400",
+    "description": "Streamline your daily workflow with AI-driven task management.",
+    "size": 45,
+    "reviews": 12400,
+    "ratingAvg": 4.8,
+    "downloads": 1000000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 500 },
+      { "name": "4 star", "count": 2400 },
+      { "name": "5 star", "count": 9000 }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Nebula Run",
+    "companyName": "StarGaze Games",
+    "image": "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?w=400",
+    "description": "An endless runner set in a neon-soaked cyberpunk galaxy.",
+    "size": 240,
+    "reviews": 8500,
+    "ratingAvg": 4.2,
+    "downloads": 500000,
+    "ratings": [
+      { "name": "1 star", "count": 800 },
+      { "name": "2 star", "count": 700 },
+      { "name": "3 star", "count": 1000 },
+      { "name": "4 star", "count": 2000 },
+      { "name": "5 star", "count": 4000 }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "ZenPulse",
+    "companyName": "Wellness Labs",
+    "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400",
+    "description": "Guided meditation and sleep sounds for a stress-free life.",
+    "size": 88,
+    "reviews": 15000,
+    "ratingAvg": 4.9,
+    "downloads": 2000000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 100 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 1500 },
+      { "name": "5 star", "count": 13000 }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "CryptoVault",
+    "companyName": "SecureChain",
+    "image": "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?w=400",
+    "description": "Securely manage and trade your digital assets on the go.",
+    "size": 32,
+    "reviews": 4200,
+    "ratingAvg": 3.7,
+    "downloads": 100000,
+    "ratings": [
+      { "name": "1 star", "count": 600 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 1100 },
+      { "name": "5 star", "count": 1200 }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "FitTrack Pro",
+    "companyName": "IronBody Media",
+    "image": "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=400",
+    "description": "Log your workouts and track calories with precision.",
+    "size": 56,
+    "reviews": 21000,
+    "ratingAvg": 4.5,
+    "downloads": 3500000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 2000 },
+      { "name": "4 star", "count": 6000 },
+      { "name": "5 star", "count": 12000 }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "SkyCast",
+    "companyName": "MeteoGroup",
+    "image": "https://images.unsplash.com/photo-1530908295418-a12e326966ba?w=400",
+    "description": "Hyper-local weather forecasts with beautiful radar maps.",
+    "size": 28,
+    "reviews": 9800,
+    "ratingAvg": 4.1,
+    "downloads": 850000,
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 900 },
+      { "name": "3 star", "count": 1500 },
+      { "name": "4 star", "count": 3000 },
+      { "name": "5 star", "count": 4000 }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "LinguaLift",
+    "companyName": "Polyglot Systems",
+    "image": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400",
+    "description": "Master any language in just 15 minutes a day.",
+    "size": 110,
+    "reviews": 33000,
+    "ratingAvg": 4.7,
+    "downloads": 5000000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 2000 },
+      { "name": "4 star", "count": 10000 },
+      { "name": "5 star", "count": 20000 }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "RecipeBox",
+    "companyName": "ChefHouse",
+    "image": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400",
+    "description": "Discover thousands of recipes and create custom meal plans.",
+    "size": 42,
+    "reviews": 1100,
+    "ratingAvg": 4.3,
+    "downloads": 75000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 100 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 500 }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "AutoFix",
+    "companyName": "GearHead Tech",
+    "image": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=400",
+    "description": "Diagnose car issues by plugging in your OBD-II scanner.",
+    "size": 15,
+    "reviews": 2500,
+    "ratingAvg": 3.9,
+    "downloads": 200000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 400 },
+      { "name": "4 star", "count": 800 },
+      { "name": "5 star", "count": 700 }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "PixelEdit",
+    "companyName": "Creative Suite",
+    "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400",
+    "description": "Professional photo editing tools in the palm of your hand.",
+    "size": 190,
+    "reviews": 45000,
+    "ratingAvg": 4.6,
+    "downloads": 10000000,
+    "ratings": [
+      { "name": "1 star", "count": 1000 },
+      { "name": "2 star", "count": 1500 },
+      { "name": "3 star", "count": 2500 },
+      { "name": "4 star", "count": 10000 },
+      { "name": "5 star", "count": 30000 }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "NightSky AR",
+    "companyName": "Cosmos Ltd",
+    "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400",
+    "description": "Identify constellations and planets using Augmented Reality.",
+    "size": 140,
+    "reviews": 18000,
+    "ratingAvg": 4.4,
+    "downloads": 1200000,
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 600 },
+      { "name": "3 star", "count": 3000 },
+      { "name": "4 star", "count": 4000 },
+      { "name": "5 star", "count": 10000 }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "SoundWave",
+    "companyName": "AudioLabs",
+    "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400",
+    "description": "High-fidelity music streaming with offline support.",
+    "size": 65,
+    "reviews": 55000,
+    "ratingAvg": 4.2,
+    "downloads": 15000000,
+    "ratings": [
+      { "name": "1 star", "count": 4000 },
+      { "name": "2 star", "count": 3000 },
+      { "name": "3 star", "count": 8000 },
+      { "name": "4 star", "count": 10000 },
+      { "name": "5 star", "count": 30000 }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "BudgetBuddy",
+    "companyName": "FinTech Soft",
+    "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400",
+    "description": "Take control of your finances with automated expense tracking.",
+    "size": 38,
+    "reviews": 7200,
+    "ratingAvg": 4.6,
+    "downloads": 400000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 2000 },
+      { "name": "5 star", "count": 4000 }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "GameDash",
+    "companyName": "Vortex Studios",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400",
+    "description": "A centralized hub to launch and optimize all your mobile games.",
+    "size": 52,
+    "reviews": 3400,
+    "ratingAvg": 3.8,
+    "downloads": 250000,
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 600 },
+      { "name": "4 star", "count": 900 },
+      { "name": "5 star", "count": 1000 }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "PlantParent",
+    "companyName": "GreenThumb",
+    "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=400",
+    "description": "Reminders and tips for keeping your indoor plants alive.",
+    "size": 25,
+    "reviews": 12000,
+    "ratingAvg": 4.9,
+    "downloads": 900000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 50 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 1800 },
+      { "name": "5 star", "count": 10000 }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "QuickScan",
+    "companyName": "DocuTech",
+    "image": "https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?w=400",
+    "description": "Turn your phone into a portable PDF scanner with OCR.",
+    "size": 18,
+    "reviews": 29000,
+    "ratingAvg": 4.7,
+    "downloads": 8000000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 3000 },
+      { "name": "4 star", "count": 5000 },
+      { "name": "5 star", "count": 20000 }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "DreamJournal",
+    "companyName": "Lucid Apps",
+    "image": "https://images.unsplash.com/photo-1531353826977-0941b4779a1c?w=400",
+    "description": "Record and analyze your dreams to find hidden patterns.",
+    "size": 12,
+    "reviews": 500,
+    "ratingAvg": 4.0,
+    "downloads": 10000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 150 },
+      { "name": "5 star", "count": 200 }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "CodeEditor Go",
+    "companyName": "DevTools.io",
+    "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400",
+    "description": "Edit HTML, CSS, and JS on the fly with syntax highlighting.",
+    "size": 74,
+    "reviews": 2100,
+    "ratingAvg": 4.1,
+    "downloads": 150000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 400 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 800 }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "SurfSafe VPN",
+    "companyName": "PrivacyGuard",
+    "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400",
+    "description": "Secure, fast, and anonymous internet browsing.",
+    "size": 40,
+    "reviews": 60000,
+    "ratingAvg": 4.4,
+    "downloads": 20000000,
+    "ratings": [
+      { "name": "1 star", "count": 3000 },
+      { "name": "2 star", "count": 2000 },
+      { "name": "3 star", "count": 10000 },
+      { "name": "4 star", "count": 15000 },
+      { "name": "5 star", "count": 30000 }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "MarketMaster",
+    "companyName": "TradeBase",
+    "image": "https://images.unsplash.com/photo-1611974714024-463891e43271?w=400",
+    "description": "Real-time stock market data and investment news.",
+    "size": 48,
+    "reviews": 14000,
+    "ratingAvg": 4.3,
+    "downloads": 1100000,
+    "ratings": [
+      { "name": "1 star", "count": 800 },
+      { "name": "2 star", "count": 1200 },
+      { "name": "3 star", "count": 2000 },
+      { "name": "4 star", "count": 3000 },
+      { "name": "5 star", "count": 7000 }
+    ]
+  }
+]
