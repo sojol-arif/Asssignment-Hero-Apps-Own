@@ -19,7 +19,7 @@ const ProductInstall = ({productItem, setUninstall, uninstall}) => {
         
         localStorage.setItem("readList", data);
         
-        toast("Wow! Apps uninstalled");
+        toast("Wow! Apps Uninstalled");
     }
 
     return (
@@ -63,7 +63,6 @@ const ProductInstall = ({productItem, setUninstall, uninstall}) => {
                      <button className='text-center bg-[#00D390] rounded-[4px] font-semibold text-[16px] text-[#fff] px-4 py-3 inline-block' onClick={()=> handleUninstall(productItem.id)}> Uninstall </button>
                 </div>
             </div>
-            <ToastContainer />
         </div>
     );
 };

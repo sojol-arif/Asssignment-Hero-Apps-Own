@@ -3,12 +3,10 @@ import {getStoreReadBook} from '../../Utility/addToLocalStorage';
 import { useLoaderData } from 'react-router';
 import { useEffect } from 'react';
 import ProductInstall from '../ProductInstall/ProductInstall';
-import logoIcon from "../../src/assets/logo-icon.png"
-  import { ToastContainer, toast } from 'react-toastify';
+import Loader from '../../src/components/Loader/Loader';
 import "../../src/App.css"
 
 const Installation = () => {
-    const [loading, setLoading] = useState(true);
 
     const dataApps = useLoaderData();
 
@@ -34,16 +32,13 @@ const Installation = () => {
         }
     }
 
+    {/* Loading Start */}
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
         setTimeout(() => setLoading(false), 1000);
     }, []);
-    
     if (loading) {
-        return (
-            <div style={styles.loading}>
-                <img style={styles.logoIcon} src={logoIcon} alt="" />
-            </div>
-        );
+        return <Loader />;
     }
 
     return (
@@ -64,37 +59,16 @@ const Installation = () => {
                         </ul>
                     </details>  
                 </div>
-                <div className='grid grid-cols-1  gap-3'>
+                <div className='grid grid-cols-1  gap-4'>
                     {uninstall.map(productItem=> (
                         <ProductInstall key={productItem.id} productItem={productItem} uninstall={uninstall} setUninstall={setUninstall}></ProductInstall>
                     ))}
                 </div>
             </div>
-            <ToastContainer />
         </div>
     );
-
     
 };
 
-const styles = {
-  loading: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100vh',
-    backgroundColor: '#f0f0f0',
-  },
-  logoIcon: {
-    animationName: 'spin',
-    animationDuration: '1s', /* Adjust this value to control the speed */
-    animationIimingFunction: 'linear',
-    animationIterationCount: 'infinite',
-    transform: 'translateZ(0)',
-    transformOrigin: 'center',
-  }
-
-};
 
 export default Installation;

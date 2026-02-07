@@ -9,14 +9,14 @@ const Product = ({productItem}) => {
 
     return (
         <Link to={`/appDetails/${id}`}>
-            <div className='rounded-[4px] bg-[#fff] shadow-[0_10px_20px_-12px_rgba(0,0,0,0.10)] p-4'>
+            <div className='rounded-[4px] bg-[#fff] shadow-[0_5px_10px_-6px_rgba(0,0,0,0.10)] hover:shadow-[0_10px_20px_-12px_rgba(0,0,0,0.20)] p-4 hover:-translate-y-2 transition-all duration-300'>
                 <div className='rounded-[8px] overflow-hidden'>
                     <img className='max-h-[316px] w-[316px] h-[316px] object-cover w-full h-[100%] object-cover' src={productItem.image} alt="" />
                 </div>
                 <div>
                     <h3 className='font-medium text-[16px] lg:text-[20px] my-[16px]'>{productItem.title}</h3>
                     <div className='flex flex-wrap justify-between'>
-                        <p className='inline-flex gap-2 items-center bg-[#F1F5E8] rounded-[4px] py-2 px-4 font-medium text-[16px] leading-[1.1]'>
+                        <p className='inline-flex gap-2 items-center bg-[#F1F5E8] text-[#00D390] rounded-[4px] py-2 px-4 font-medium text-[16px] leading-[1.1]'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M2.96751 10.5599C3.32097 10.5599 3.60751 10.8465 3.60751 11.1999V12.4799C3.60751 12.6497 3.67493 12.8124 3.79498 12.9325C3.91499 13.0525 4.07777 13.1199 4.24751 13.1199H11.9275C12.0972 13.1199 12.26 13.0525 12.38 12.9325C12.5001 12.8124 12.5675 12.6497 12.5675 12.4799V11.1999C12.5675 10.8465 12.854 10.5599 13.2075 10.5599C13.561 10.5599 13.8475 10.8465 13.8475 11.1999V12.4799C13.8475 12.9891 13.6453 13.4775 13.2851 13.8376C12.9251 14.1976 12.4367 14.3999 11.9275 14.3999H4.24751C3.73831 14.3999 3.24993 14.1977 2.88986 13.8376C2.52981 13.4775 2.32751 12.9891 2.32751 12.4799V11.1999C2.32751 10.8465 2.61405 10.5599 2.96751 10.5599Z" fill="#00D390"/>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M4.43501 6.90743C4.68495 6.65749 5.09017 6.65749 5.34011 6.90743L8.08755 9.65488L10.835 6.90743C11.0849 6.65749 11.4902 6.65749 11.7401 6.90743C11.9901 7.15735 11.9901 7.56259 11.7401 7.81251L8.54009 11.0125C8.29017 11.2624 7.88492 11.2624 7.635 11.0125L4.43501 7.81251C4.18508 7.56259 4.18508 7.15735 4.43501 6.90743Z" fill="#00D390"/>

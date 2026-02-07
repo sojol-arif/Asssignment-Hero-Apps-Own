@@ -1,9 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { formatNumber } from "../../Utility/FormatNumber";
 import { Link } from 'react-router';
 import {addToStoreDb} from '../../Utility/addToLocalStorage';
 import { ToastContainer, toast } from 'react-toastify';
+import Loader from '../../src/components/Loader/Loader';
+import "../../src/App.css"
+
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { Bar } from "react-chartjs-2";
+
+ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
+
 
 const AppDetails = () => {
     const {idd} = useParams();
@@ -17,11 +32,65 @@ const AppDetails = () => {
 
     const [installName, setInstallName] = useState('Install Now');
 
+    const [installYes, setInstallYes] = useState(true);
+
     const handleInstall = (id) => {
         addToStoreDb(id);
         setInstallName('Installed');
+        setInstallYes(false);
 
         toast("Wow! Apps installed");
+    }
+
+
+    {/* Get Rating */}
+    const ratingArray = singleApp.ratings.map(rating => rating.count);
+    const ratingNameArray = singleApp.ratings.map(rating => rating.name);
+
+    {/* Chart Js */}
+     const data = {
+        labels: ratingNameArray.reverse(),
+        datasets: [
+            {
+                label: "Ratings",
+                data: ratingArray.reverse(), // example values
+                backgroundColor: "#ff8c00", // orange
+                borderRadius: 0,
+                barThickness: 32,
+            },
+        ],
+    };
+
+    const options = {
+        indexAxis: "y", // 👈 makes it horizontal
+        responsive: true,
+        plugins: {
+        legend: {
+            display: false,
+        },
+        },
+        scales: {
+        x: {
+            beginAtZero: true,
+            grid: {
+            display: false,
+            },
+        },
+        y: {
+            grid: {
+            display: false,
+            },
+        },
+        },
+    };
+
+    {/* Loading Start */}
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        setTimeout(() => setLoading(false), 1000);
+    }, []);
+    if (loading) {
+        return <Loader />;
     }
 
     return (
@@ -88,8 +157,15 @@ const AppDetails = () => {
                                 </h3>
                             </div>
                         </div>
-                        <button className='mt-7.25 text-center bg-[#00D390] rounded-[4px] font-semibold text-[16px] lg:text-[20px] text-[#fff] px-5 py-3.5 inline-block shadow-lg' onClick={()=> handleInstall(idd)}> {installName} { installName != "Installed"? (size) +"MB":''} </button>
+                        <button className='mt-7.25 text-center bg-[#00D390] rounded-[4px] font-semibold text-[16px] lg:text-[20px] text-[#fff] px-5 py-3.5 inline-block shadow-lg' disabled={!installYes}
+                        onClick={()=> handleInstall(idd)}> {installName} { installYes? "("+(size) +"MB)" :''} </button>
                     </div>
+                </div>
+                <div className='border-t border-t-[rgba(0,25,49,0.2)] my-7.25'></div>
+
+                <div style={{ width: "100%", maxWidth: "900px" }}>
+                    <h3>Ratings</h3>
+                    <Bar data={data} options={options} />
                 </div>
                 <div className='border-t border-t-[rgba(0,25,49,0.2)] my-7.25'></div>
                 <div>
@@ -99,7 +175,6 @@ const AppDetails = () => {
                     </p>
                 </div>
             </div>
-            <ToastContainer />
         </div>
     );
 };

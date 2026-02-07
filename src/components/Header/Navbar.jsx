@@ -55,7 +55,7 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className="navbar-end">
-                        <Link to={"https://github.com/sojol-arif?tab=repositories"} className='flex items-center bg-linear-to-r from-[#632EE3] to-[#9F62F2] px-4 py-3 rounded-[4px] font-semibold gap-3 text-[#fff]'>
+                        <Link to={"https://github.com/sojol-arif?tab=repositories"} className='flex items-center bg-linear-[145deg,#632EE3_0%,#9F62F2_100%] px-4 py-3 rounded-[4px] font-semibold gap-3 text-[#fff]'>
                         
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <g clip-path="url(#clip0_1_698)">
