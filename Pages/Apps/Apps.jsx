@@ -1,24 +1,53 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router';
 import Product from '../../src/components/Product/Product';
+import { Link } from 'react-router';
+import appsNoFound from '../../src/assets/appsNoFound.png'
+import { useEffect } from 'react';
+import logoIcon from "../../src/assets/logo-icon.png"
+import "../../src/App.css"
 
 const Apps = () => {
+    const [loading, setLoading] = useState(true);
+
+    const [searchLoading, setSearchLoading] = useState(false);
     const dataProduct = useLoaderData();
     const [jsonFile, setJsonFile] = useState(dataProduct);
     const [searhFilter, setSearchFilter] = useState("");
 
     const handleSearch = (value) => {
+        setSearchLoading(true);
+
         setSearchFilter(value);
         const filterProductSearch = dataProduct.filter(app => app.title.toLowerCase().includes(value.toLowerCase()));
         setJsonFile(filterProductSearch);
+
+         setTimeout(() => setSearchLoading(false), 200);
+    }
+    
+    const handleBackHome = () => {
+        setSearchFilter('');
+        setJsonFile(dataProduct);
+    }
+
+    useEffect(() => {
+        setTimeout(() => setLoading(false), 500);
+    }, []);
+    
+    if (loading) {
+        return (
+            <div style={styles.loading}>
+                <img style={styles.logoIcon} src={logoIcon} alt="" />
+            </div>
+        );
     }
 
     return (
         <div className='my-10 lg:my-20 mx-auto mx-10 lg:mx-20 flex justify-center'>
             <div className='max-w-[1440px] w-full'>
                 <div className='text-center mb-7 lg:mb-10'>
-                    <h2 className='font-bold text-[32px] lg:text-[48px]'>Our All Applications</h2>
-                    <p className='text-[16px] lg:text-[20px]'>Explore All Apps on the Market developed by us. We code for Millions</p>
+                    <h2 className='font-bold text-[32px] lg:text-[48px] text-center'>Our All Applications</h2>
+                    <p className='text-[16px] lg:text-[20px] text-center'>Explore All Apps on the Market developed by us. We code for Millions</p>
                 </div>
                 <div className='mb-2.5 flex flex-wrap justify-between items-center'>
                     <div>
@@ -35,14 +64,60 @@ const Apps = () => {
                         </form>
                     </div>
                 </div>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
-                    {jsonFile.map(productItem=> (
-                        <Product key={productItem.id} productItem={productItem}></Product>
-                    ))}
-                </div>
+
+                {jsonFile.length == 0?
+                    (<div>
+                        <div className='text-center flex justify-center flex-col items-center'>
+                            <img className='mb-8 mt-20 max-w-[300px]' src={appsNoFound} alt="" />
+                            <h2 className='font-semibold text-[36px] lg:text-[48px] text-uppercase text-[#001931] text-center'>OPPS!! APP NOT FOUND</h2>
+                            <p className='text-[#627382] text-[18px] lg:text-[20px] text-center'>The App you are requesting is not found on our system.  please try another apps</p>
+                            <div className='flex items-center justify-center mt-4'>
+                                <button className='font-semibold text-[16px] rounded-[4px] bg-linear-[145deg,#632EE3_0%,#9F62F2_100%] px-5 py-3 min-w-[145px] text-[#fff] text-center' onClick={()=>handleBackHome()}>
+                                    Go Back!
+                                </button>
+                            </div>
+                        </div>
+                    </div>) 
+                    :
+                    (
+                        searchLoading?
+                        (
+                            <div style={styles.loading}>
+                                <img style={styles.logoIcon} src={logoIcon} alt="" />
+                            </div>
+                        )
+                        :
+
+                        (<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
+                            {jsonFile.map(productItem=> (
+                                <Product key={productItem.id} productItem={productItem}></Product>
+                            ))}
+                        </div>)
+                    )
+                }
             </div>
         </div>
     );
+};
+
+const styles = {
+  loading: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100vh',
+    backgroundColor: '#f0f0f0',
+  },
+  logoIcon: {
+    animationName: 'spin',
+    animationDuration: '1s', /* Adjust this value to control the speed */
+    animationIimingFunction: 'linear',
+    animationIterationCount: 'infinite',
+    transform: 'translateZ(0)',
+    transformOrigin: 'center',
+  }
+
 };
 
 export default Apps;

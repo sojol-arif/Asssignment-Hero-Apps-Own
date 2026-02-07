@@ -3,9 +3,12 @@ import {getStoreReadBook} from '../../Utility/addToLocalStorage';
 import { useLoaderData } from 'react-router';
 import { useEffect } from 'react';
 import ProductInstall from '../ProductInstall/ProductInstall';
+import logoIcon from "../../src/assets/logo-icon.png"
+  import { ToastContainer, toast } from 'react-toastify';
+import "../../src/App.css"
 
 const Installation = () => {
-   
+    const [loading, setLoading] = useState(true);
 
     const dataApps = useLoaderData();
 
@@ -29,6 +32,18 @@ const Installation = () => {
             const sortList2 = [...uninstall].sort((a,b)=> a.downloads -b.downloads );
             setUninstall(sortList2);
         }
+    }
+
+    useEffect(() => {
+        setTimeout(() => setLoading(false), 1000);
+    }, []);
+    
+    if (loading) {
+        return (
+            <div style={styles.loading}>
+                <img style={styles.logoIcon} src={logoIcon} alt="" />
+            </div>
+        );
     }
 
     return (
@@ -55,8 +70,31 @@ const Installation = () => {
                     ))}
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
+
+    
+};
+
+const styles = {
+  loading: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100vh',
+    backgroundColor: '#f0f0f0',
+  },
+  logoIcon: {
+    animationName: 'spin',
+    animationDuration: '1s', /* Adjust this value to control the speed */
+    animationIimingFunction: 'linear',
+    animationIterationCount: 'infinite',
+    transform: 'translateZ(0)',
+    transformOrigin: 'center',
+  }
+
 };
 
 export default Installation;

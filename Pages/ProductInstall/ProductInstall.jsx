@@ -1,10 +1,13 @@
 import React from 'react';
 import {formatNumber} from "../../Utility/FormatNumber";
-import {getStoreReadBook} from '../../Utility/addToLocalStorage';
+import {getStoreReadBook} from '../../Utility/addToLocalStorage';  
+import { ToastContainer, toast } from 'react-toastify';
+
 
 const ProductInstall = ({productItem, setUninstall, uninstall}) => {
     
     const handleUninstall = (id) => {
+        
         const newFilterRemove = uninstall.filter(app => app.id != id);
         setUninstall(newFilterRemove);
 
@@ -15,7 +18,8 @@ const ProductInstall = ({productItem, setUninstall, uninstall}) => {
         const data = JSON.stringify(newLocalStorageData);
         
         localStorage.setItem("readList", data);
-
+        
+        toast("Wow! Apps uninstalled");
     }
 
     return (
@@ -59,6 +63,7 @@ const ProductInstall = ({productItem, setUninstall, uninstall}) => {
                      <button className='text-center bg-[#00D390] rounded-[4px] font-semibold text-[16px] text-[#fff] px-4 py-3 inline-block' onClick={()=> handleUninstall(productItem.id)}> Uninstall </button>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };

@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from 'react-router';
 import { formatNumber } from "../../Utility/FormatNumber";
 import { Link } from 'react-router';
 import {addToStoreDb} from '../../Utility/addToLocalStorage';
+import { ToastContainer, toast } from 'react-toastify';
 
 const AppDetails = () => {
     const {idd} = useParams();
@@ -16,10 +17,11 @@ const AppDetails = () => {
 
     const [installName, setInstallName] = useState('Install Now');
 
-
     const handleInstall = (id) => {
         addToStoreDb(id);
         setInstallName('Installed');
+
+        toast("Wow! Apps installed");
     }
 
     return (
@@ -97,6 +99,7 @@ const AppDetails = () => {
                     </p>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };
