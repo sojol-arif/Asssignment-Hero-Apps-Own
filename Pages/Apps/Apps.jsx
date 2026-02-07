@@ -43,13 +43,13 @@ const Apps = () => {
     }
 
     return (
-        <div className='my-10 lg:my-20 mx-auto mx-10 lg:mx-20 flex justify-center'>
+        <div className='my-10 lg:my-20 mx-auto px-5 md:px-10 lg:px-20 flex justify-center'>
             <div className='max-w-[1440px] w-full'>
                 <div className='text-center mb-7 lg:mb-10'>
                     <h2 className='font-bold text-[32px] lg:text-[48px] text-center'>Our All Applications</h2>
                     <p className='text-[16px] lg:text-[20px] text-center'>Explore All Apps on the Market developed by us. We code for Millions</p>
                 </div>
-                <div className='mb-2.5 flex flex-wrap justify-between items-center'>
+                <div className='mb-4 flex flex-wrap gap-3 justify-between items-center'>
                     <div>
                         <p className='font-semibold text-[20px] lg:text-[24px]'>({jsonFile.length}) Apps Found</p>
                     </div>

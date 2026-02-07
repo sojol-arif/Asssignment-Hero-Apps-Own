@@ -42,7 +42,7 @@ const Installation = () => {
     }
 
     return (
-        <div className='my-10 lg:my-20 mx-auto mx-10 lg:mx-20 flex justify-center'>
+        <div className='my-10 lg:my-20 mx-auto px-5 md:px-10 lg:px-20 flex justify-center'>
             <div className='max-w-[1440px] w-full'>
                 <div className='text-center mb-7 lg:mb-10'>
                     <h2 className='font-bold text-[32px] lg:text-[48px]'>Our All Applications</h2>

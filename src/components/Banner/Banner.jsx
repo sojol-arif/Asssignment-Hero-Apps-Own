@@ -22,17 +22,17 @@ const Banner = () => {
                     <Link to="https://play.google.com/store/games?hl=en" className='flex flex-wrap items-center gap-2 rounded-[4px] border border-[#D2D2D2] px-6 py-3 text-[18px] lg:text-[20px] text-[#001931] font-semibold hover:shadow-[0_5px_10px_-2px_rgba(0,0,0,0.1)] transition duration-300'> <img src={googAppBtn}/> Google Play</Link>
                     <Link to="https://www.apple.com/app-store/" className='flex flex-wrap items-center gap-2 rounded-[4px] border border-[#D2D2D2] px-6 py-3 text-[18px] lg:text-[20px] text-[#001931] font-semibold hover:shadow-[0_5px_10px_-2px_rgba(0,0,0,0.1)] transition duration-300'>  <img src={appStoreBtn}/> App Store</Link>
                 </div>
-                <div className='iphpne_box flex flex-wrap gap-[40px]'>
+                <div className='iphpne_box flex flex-wrap gap-[40px] mb-7 xl:mb-0'>
                     <div className='w-[100%] lg:w-[200px] flex flex-col gap-[40px] items-center lg:items-start'> 
-                        <div className='lg:ml-[120px] sm:mt-[80px]'><img className='max-w-[80px]' src={icon1} alt="" /></div>
+                        <div className='lg:ml-[120px] md:mt-[80px]'><img className='max-w-[80px]' src={icon1} alt="" /></div>
                         <div className='lg:ml-[40px]'><img className='max-w-[80px]' src={icon2} alt="" /></div>
                         <div><img className='max-w-[80px]' src={icon3} alt="" /></div>
                     </div>
-                    <div>
-                        <div><img className='max-w-[100%] sm:max-w-[442px]' src={iphone} alt="" /></div>
+                    <div className='flex justify-center w-full lg:w-auto'>
+                        <div><img className='max-w-[100%] md:max-w-[442px]' src={iphone} alt="" /></div>
                     </div>
                     <div className='w-[100%] lg:w-[200px] flex flex-col gap-[40px] items-center lg:items-start'> 
-                        <div><img className='max-w-[80px] sm:mt-[80px]' src={icon4} alt="" /></div>
+                        <div><img className='max-w-[80px] md:mt-[80px]' src={icon4} alt="" /></div>
                         <div className='lg:ml-[80px]'><img className='max-w-[80px]' src={icon5} alt="" /></div>
                         <div className='lg:ml-[120px]'><img className='max-w-[80px]' src={icon6} alt="" /></div>
                     </div>
