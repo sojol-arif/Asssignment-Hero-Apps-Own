@@ -44,6 +44,7 @@ const Apps = () => {
 
     return (
         <div className='my-10 lg:my-20 mx-auto px-5 md:px-10 lg:px-20 flex justify-center'>
+            <title>Apps</title>
             <div className='max-w-[1440px] w-full'>
                 <div className='text-center mb-7 lg:mb-10'>
                     <h2 className='font-bold text-[32px] lg:text-[48px] text-center'>Our All Applications</h2>

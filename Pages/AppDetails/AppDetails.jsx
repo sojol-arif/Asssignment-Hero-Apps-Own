@@ -95,6 +95,8 @@ const AppDetails = () => {
 
     return (
         <div className='px-5 md:px-10 lg:px-20 py-10 lg:py-20'>
+            <title>{title}</title>
+            
             <div className='max-w-[1440px] mx-auto'>
                 <div className='app_first_section flex flex-wrap gap-9'>
                     <div>

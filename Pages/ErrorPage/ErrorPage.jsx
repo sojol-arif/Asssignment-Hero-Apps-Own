@@ -6,6 +6,7 @@ import Navbar from "../../src/components/Header/Navbar"
 const ErrorPage = () => {
     return (
         <div>
+            <title>Error Page</title>
             <Navbar></Navbar>
             <div className='px-10 lg:px-20 mx-auto'>
                 <div className='max-w-[1440px] mx-auto'>
